@@ -1,38 +1,87 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Parker's Drive-In</title>
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container"><h1 class="logo">Drive-In</h1></div>
-            <div class="menu-container">
-                <ul class="menu-list">
-                    <li class="menu-list-item active">Home</li>
-                    <li class="menu-list-item">Movies</li>
-                    <li class="menu-list-item">Shows</li>
-                    <li class="menu-list-item">Popular</li>
-                    <li class="menu-list-item">Trending</li>
-                </ul>
-            </div>
-            <div class="profile-container">
-                <img class="profile-picture" src="/images/munky.jpg" alt="">
-                <div class="profile-text-container">
-                    <span class="profile-text">Profile</span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
+<div class="navbar">
+    <div class="navbar-container">
+        <div class="logo-container"><h1 class="logo">Drive-In</h1></div>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li class="menu-list-item active">Home</li>
+                <li class="menu-list-item">Movies</li>
+                <li class="menu-list-item">Shows</li>
+                <li class="menu-list-item">Popular</li>
+                <li class="menu-list-item">Trending</li>
+            </ul>
+        </div>
+        <div class="profile-container">
+            <img class="profile-picture" src="/images/munky.jpg" alt="">
+            <div class="profile-text-container">
+                <span class="profile-text">Profile</span>
+                <i class="fa-solid fa-caret-down"></i>
             </div>
         </div>
     </div>
-    <div class="sidebar"></div>
-    
+</div>
+<div class="sidebar"></div>    
+<main style="margin-left: 200px;">
+        <section >
+            <select id="genreSelect">
+              <option>Select Genre</option>
+              <option value="27">Horror</option>
+              <option value="18">Drama</option>
+              <option value="28">Action</option>
+              <option value="35">Comedy</option>
+              <option value="53">Thriller</option>
+            </select>
+          </section>
+        <section id="serviceSelect">
+            <label class="checkbox">
+                <input type="checkbox" value="netflix">
+                Netflix
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="hulu">
+                Hulu
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="hbo">
+                Max
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="disney">
+                Disney+
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="prime">
+                Prime Video
+            </label>
+        </section>
+        <button id="startBtn">Search</button>
+        <!-- <div class="search-container">
+            <form id="searchForm">
+                <input type="text" id="movieTitleInput" placeholder="Enter a movie title" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <div id="result">
+          <h2 id="result-title"></h2>
+        </div>-->
+    </main>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/script.js"></script>
+
 </html>
