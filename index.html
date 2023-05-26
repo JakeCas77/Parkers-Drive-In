@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Streaming Service Search</title>
 </head>
+
 <body>
-    
+    <main>
+        <section >
+            <select id="genreSelect">
+              <option></option>
+              <option value="27">Horror</option>
+              <option value="18">Drama</option>
+              <option value="28">Action</option>
+              <option value="35">Comedy</option>
+              <option value="53">Thriller</option>
+            </select>
+          </section>
+        <section id="serviceSelect">
+            <label class="checkbox">
+                <input type="checkbox" value="netflix">
+                Netflix
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="hulu">
+                Hulu
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="hbo">
+                Max
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="disney">
+                Disney+
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="prime">
+                Prime Video
+            </label>
+        </section>
+        <button id="startBtn">Search</button>
+        <!-- <div class="search-container">
+            <form id="searchForm">
+                <input type="text" id="movieTitleInput" placeholder="Enter a movie title" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <div id="result">
+          <h2 id="result-title"></h2>
+        </div>-->
+    </main>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/script.js"></script>
+
 </html>
