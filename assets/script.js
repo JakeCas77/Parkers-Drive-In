@@ -1,39 +1,35 @@
-const settings = {
-	async: true,
-	crossDomain: true,
-	url: 'https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=7.8&genre=action&language=english&type=movie&sort=latest&page=1',
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '6f2a08350amsh0dfe802e51b9fecp1c6cc9jsn3b3c7ca4f841',
-		'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
-	}
-};
+document.getElementById('startBtn').addEventListener('click', function (event) {
 
-function getApi() {
+    var selectedGenre = $("#genreSelect").val()
+    var selectedStreaming = [];
+    // $('input[type="checkbox"]:checked').forEach
 
-    var requestURL = 'https://ott-details.p.rapidapi.com/advancedsearch?start_year=1970&end_year=2020&min_imdb=6&max_imdb=7.8&genre=action&language=english&type=movie&sort=latest&page=1'
 
-    fetch(requestURL)
-    .then(function(response) {
-        return response.json();
-    })
-}
+    var checkedBoxes =  $('input[type="checkbox"]:checked');
+    console.log('checked boxes: ');
+    console.log(checkedBoxes);
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+    for (var i = 0; i < checkedBoxes.length; i++) {
+        var value = $(checkedBoxes[i]).val();
+        selectedStreaming.push(value);
+    }
+    console.log(selectedStreaming);
+    var streamingParam = selectedStreaming.join('%2C');
+    console.log(streamingParam);
+    var apiURL =  `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=zombie`
+    
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: apiURL,
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '3a0a39d101msh08a21993ce251cep1cd214jsn486a3c0404ce',
+            'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
 
-const movies = {
-	async: true,
-	crossDomain: true,
-	url: 'https://streaming-availability.p.rapidapi.com/v2/services',
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '6f2a08350amsh0dfe802e51b9fecp1c6cc9jsn3b3c7ca4f841',
-		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-	}
-};
-
-$.ajax(movies).done(function (response) {
-	console.log(response);
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
 });
