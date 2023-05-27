@@ -2,12 +2,11 @@ document.getElementById('startBtn').addEventListener('click', function (event) {
 
     var selectedGenre = $("#genreSelect").val()
     var selectedStreaming = [];
-    // $('input[type="checkbox"]:checked').forEach
+    var keyword = $("#keywordInput").val();
 
 
     var checkedBoxes =  $('input[type="checkbox"]:checked');
-    console.log('checked boxes: ');
-    console.log(checkedBoxes);
+    // console.log(checkedBoxes);
 
     for (var i = 0; i < checkedBoxes.length; i++) {
         var value = $(checkedBoxes[i]).val();
@@ -15,8 +14,8 @@ document.getElementById('startBtn').addEventListener('click', function (event) {
     }
     console.log(selectedStreaming);
     var streamingParam = selectedStreaming.join('%2C');
-    console.log(streamingParam);
-    var apiURL =  `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=zombie`
+    // console.log(streamingParam);
+    var apiURL =  `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=${keyword}`
     
     const settings = {
         async: true,
