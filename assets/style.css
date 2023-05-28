@@ -67,3 +67,8 @@ font-family: 'Roboto', sans-serif;
     position: fixed;
     top: 0;
 }
+
+.results-item
+img {
+    max-width: 780px;
+}

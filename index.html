@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,7 +45,12 @@
               <option value="35">Comedy</option>
               <option value="53">Thriller</option>
             </select>
-          </section>
+        </section>
+        <section>
+            <form id="searchForm">
+                <input type="text" id="keywordInput" placeholder="Enter a Keyword">
+            </form>
+        </section>
         <section id="serviceSelect">
             <label class="checkbox">
                 <input type="checkbox" value="netflix">
@@ -59,12 +65,12 @@
                 Max
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="disney">
-                Disney+
+                <input type="checkbox" value="prime.subscription">
+                Prime Video
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="prime">
-                Prime Video
+                <input type="checkbox" value="disney">
+                Disney+
             </label>
         </section>
         <button id="startBtn">Search</button>
@@ -73,11 +79,10 @@
                 <input type="text" id="movieTitleInput" placeholder="Enter a movie title" required>
                 <button type="submit">Search</button>
             </form>
-        </div>
-        
-        <div id="result">
-          <h2 id="result-title"></h2>
         </div>-->
+        
+        <div id="results">
+        </div>
     </main>
 </body>
 
