@@ -35,7 +35,7 @@ function fetchMovieResults() {
             const title = response.result[i].title;
             // Create a movie item element
             const movieItem = document.createElement('div');
-            movieItem.classList.add('forecast-item');
+            movieItem.classList.add('results-item');
 
             // Populate the movie item with data
             movieItem.innerHTML = `
