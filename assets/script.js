@@ -30,7 +30,7 @@ function fetchMovieResults() {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 8; i++) {
 
             const resultsContainer = document.getElementById("results");
             const title = response.result[i].title;
@@ -43,12 +43,13 @@ function fetchMovieResults() {
 
             // Populate the movie item with data
             movieItem.innerHTML = `
-            <img src="${movieImg}">
-            <p>${title}</p>
-            <p>${releaseYear}</p>
+                <img src="${movieImg}">
+                <h3>${title}</h3>
+                <p>${releaseYear}</p>
             `;
 
             // Append the movie item to the movie container
             resultsContainer.appendChild(movieItem);
-        }});
+        }
+    });
 }
