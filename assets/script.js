@@ -29,17 +29,23 @@ function fetchMovieResults() {
     };
 
     $.ajax(settings).done(function (response) {
+        console.log(response);
         for (let i = 0; i < 5; i++) {
 
             const resultsContainer = document.getElementById("results");
             const title = response.result[i].title;
+            const releaseYear = response.result[i].year;
+            const movieImg = response.result[i].backdropURLs.original;
+
             // Create a movie item element
             const movieItem = document.createElement('div');
             movieItem.classList.add('results-item');
 
             // Populate the movie item with data
             movieItem.innerHTML = `
-            <p>Title: ${title}</p>
+            <img src="${movieImg}">
+            <p>${title}</p>
+            <p>${releaseYear}</p>
             `;
 
             // Append the movie item to the movie container
