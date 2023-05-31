@@ -3,8 +3,8 @@
 }
 
 body{
-font-family: 'Roboto', sans-serif;
-
+    font-family: 'Roboto', sans-serif;
+    background-color: #151515;
 }
 
 .navbar{
@@ -105,13 +105,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 .container{
-    background-color:#151515 ;
-    height: calc(100vh - 50px);
+    /* background-color:#151515 ;
+    height: calc(100vh - 50px); */
     color: white;
 }
 
 content-container{
-    margin-left: 700px;
+    margin-left: 70px;
 }
 
 .results-item
