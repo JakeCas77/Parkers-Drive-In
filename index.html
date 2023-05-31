@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Parker's Drive-In</title>
 </head>
 
@@ -80,7 +81,7 @@
         </section>
         <section>
             <form id="searchForm">
-                <input type="text" id="keywordInput" placeholder="Enter a Keyword">
+                <input type="text" id="keywordInput" placeholder="Enter a Keyword (optional)">
             </form>
         </section>
         <section id="serviceSelect">
@@ -97,12 +98,25 @@
                 Max
             </label>
             <label class="checkbox">
+                <input type="checkbox" value="disney">
+                Disney+
+            </label>
+            <label class="checkbox">
                 <input type="checkbox" value="prime.subscription">
                 Prime Video
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="disney">
-                Disney+
+                <input type="checkbox" value="apple">
+                Apple TV
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="paramount">
+                Paramount Plus
+            </label>
+            
+            <label class="checkbox">
+                <input type="checkbox" value="peacock">
+                Peacock
             </label>
         </section>
         <button id="startBtn">Search</button>
