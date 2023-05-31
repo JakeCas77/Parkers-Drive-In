@@ -107,11 +107,11 @@ font-family: 'Roboto', sans-serif;
 .container{
     background-color:#151515 ;
     height: calc(100vh - 50px);
-    color: white
+    color: white;
 }
 
 content-container{
-    margin-left: 70px;
+    margin-left: 700px;
 }
 
 .results-item
