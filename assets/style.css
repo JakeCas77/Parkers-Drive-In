@@ -117,9 +117,16 @@ content-container{
 
 .results-item {
     margin-bottom: 20px;
+    display: flex;
 }
 
 .results-item
 img {
     max-width: 780px;
+}
+
+
+.movieImgThumbNail {
+    width: 15%;
+    margin-right: 15px;
 }
