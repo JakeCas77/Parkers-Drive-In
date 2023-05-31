@@ -1,23 +1,22 @@
 document.getElementById('startBtn').addEventListener('click', function (event) {
+    fetchMovieResults();
+})
 
-    var selectedGenre = $("#genreSelect").val()
+function fetchMovieResults() {
+    var selectedGenre = $("#genreSelect").val();
     var selectedStreaming = [];
-    // $('input[type="checkbox"]:checked').forEach
+    var keyword = $("#keywordInput").val();
 
-
-    var checkedBoxes =  $('input[type="checkbox"]:checked');
-    console.log('checked boxes: ');
-    console.log(checkedBoxes);
+    var checkedBoxes = $('input[type="checkbox"]:checked');
 
     for (var i = 0; i < checkedBoxes.length; i++) {
         var value = $(checkedBoxes[i]).val();
         selectedStreaming.push(value);
     }
-    console.log(selectedStreaming);
+
     var streamingParam = selectedStreaming.join('%2C');
-    console.log(streamingParam);
-    var apiURL =  `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=zombie`
-    
+    var apiURL = `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=${keyword}`;
+
     const settings = {
         async: true,
         crossDomain: true,
@@ -31,5 +30,26 @@ document.getElementById('startBtn').addEventListener('click', function (event) {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
+        for (let i = 0; i < 8; i++) {
+
+            const resultsContainer = document.getElementById("results");
+            const title = response.result[i].title;
+            const releaseYear = response.result[i].year;
+            const movieImg = response.result[i].backdropURLs.original;
+
+            // Create a movie item element
+            const movieItem = document.createElement('div');
+            movieItem.classList.add('results-item');
+
+            // Populate the movie item with data
+            movieItem.innerHTML = `
+                <img src="${movieImg}">
+                <h3>${title}</h3>
+                <p>${releaseYear}</p>
+            `;
+
+            // Append the movie item to the movie container
+            resultsContainer.appendChild(movieItem);
+        }
     });
-});
+}

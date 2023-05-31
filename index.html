@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,23 +30,60 @@
             <img class="profile-picture" src="/images/munky.jpg" alt="">
             <div class="profile-text-container">
                 <span class="profile-text">Profile</span>
-                <i class="fa-solid fa-caret-down"></i>
+                <i class="fa-solid fa-caret-down">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div> 
+                </i>
             </div>
+            <div class="toggle">
         </div>
     </div>
 </div>
-<div class="sidebar"></div>    
+<div class="sidebar">
+    <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+        <i class="left-menu-icon fa-solid fa-house"></i>
+        <i class="left-menu-icon fa-solid fa-users"></i>
+        <i class="left-menu-icon fa-solid fa-bookmark"></i>
+        <i class="left-menu-icon fa-solid fa-tv"></i>
+        <i class="left-menu-icon fa-solid fa-hourglass-start"></i>
+        <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="container">
+        <div class="content-container"></div>
+    
 <main style="margin-left: 200px;">
         <section >
             <select id="genreSelect">
               <option>Select Genre</option>
-              <option value="27">Horror</option>
-              <option value="18">Drama</option>
               <option value="28">Action</option>
+              <option value="12">Adventure</option>
+              <option value="16">Animation</option>
+              <option value="1">Biography</option>
               <option value="35">Comedy</option>
+              <option value="80">Crime</option>
+              <option value="99">Documentary</option>
+              <option value="18">Drama</option>
+              <option value="10751">Family</option>
+              <option value="14">Fantasy</option>
+              <option value="2">Film Noir</option>
+              <option value="36">History</option>
+              <option value="27">Horror</option>
+              <option value="4">Musical</option>
+              <option value="9648">Mystery</option>
+              <option value="10749">Romance</option>
+              <option value="878">Science Fiction</option>
+              <option value="5">Sport</option>
               <option value="53">Thriller</option>
+              <option value="10752">War</option>
+              <option value="37">Western</option>
             </select>
-          </section>
+        </section>
+        <section>
+            <form id="searchForm">
+                <input type="text" id="keywordInput" placeholder="Enter a Keyword">
+            </form>
+        </section>
         <section id="serviceSelect">
             <label class="checkbox">
                 <input type="checkbox" value="netflix">
@@ -60,12 +98,12 @@
                 Max
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="disney">
-                Disney+
+                <input type="checkbox" value="prime.subscription">
+                Prime Video
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="prime">
-                Prime Video
+                <input type="checkbox" value="disney">
+                Disney+
             </label>
         </section>
         <button id="startBtn">Search</button>
@@ -74,11 +112,11 @@
                 <input type="text" id="movieTitleInput" placeholder="Enter a movie title" required>
                 <button type="submit">Search</button>
             </form>
-        </div>
-        
-        <div id="result">
-          <h2 id="result-title"></h2>
         </div>-->
+        
+        <div id="results">
+        </div>
+    </div>
     </main>
 </body>
 
