@@ -115,6 +115,10 @@ content-container{
     margin-left: 70px;
 }
 
+.results-item {
+    margin-bottom: 20px;
+}
+
 .results-item
 img {
     max-width: 780px;
