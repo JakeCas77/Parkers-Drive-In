@@ -4,139 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Parker's Drive-In</title>
 </head>
 <header>
     <div class="logo">
         <h1>Drive In</h1>
-    </div></header>
-
+    </div>
+</header>
 <body>
-<!-- <div class="navbar">
-    <div class="navbar-container">
-        <div class="logo-container"><h1 class="logo">Drive-In</h1></div>
-        <div class="menu-container">
-            <ul class="menu-list">
-                <li class="menu-list-item active">Home</li>
-                <li class="menu-list-item">Movies</li>
-                <li class="menu-list-item">Shows</li>
-                <li class="menu-list-item">Popular</li>
-                <li class="menu-list-item">Trending</li>
-            </ul>
-        </div>
-        <div class="profile-container">
-            <img class="profile-picture" src="/images/munky.jpg" alt="">
-            <div class="profile-text-container">
-                <span class="profile-text">Profile</span>
-                <i class="fa-solid fa-caret-down">
-                    <i class="fa-solid fa-moon toggle-icon"></i>
-                    <i class="fa-solid fa-sun toggle-icon"></i>
-                    <div class="toggle-ball"></div> 
-                </i>
-            </div>
-            <div class="toggle">
-        </div>
-    </div>
-</div>
-<div class="sidebar">
-    <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
-        <i class="left-menu-icon fa-solid fa-house"></i>
-        <i class="left-menu-icon fa-solid fa-users"></i>
-        <i class="left-menu-icon fa-solid fa-bookmark"></i>
-        <i class="left-menu-icon fa-solid fa-tv"></i>
-        <i class="left-menu-icon fa-solid fa-hourglass-start"></i>
-        <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
-    </div> -->
     <div class="container">
-        <div class="content-container"></div>
-    
-<main >
-        <section >
-            <select id="genreSelect">
-              <option>Select Genre</option>
-              <option value="28">Action</option>
-              <option value="12">Adventure</option>
-              <option value="16">Animation</option>
-              <option value="1">Biography</option>
-              <option value="35">Comedy</option>
-              <option value="80">Crime</option>
-              <option value="99">Documentary</option>
-              <option value="18">Drama</option>
-              <option value="10751">Family</option>
-              <option value="14">Fantasy</option>
-              <option value="2">Film Noir</option>
-              <option value="36">History</option>
-              <option value="27">Horror</option>
-              <option value="4">Musical</option>
-              <option value="9648">Mystery</option>
-              <option value="10749">Romance</option>
-              <option value="878">Science Fiction</option>
-              <option value="5">Sport</option>
-              <option value="53">Thriller</option>
-              <option value="10752">War</option>
-              <option value="37">Western</option>
-            </select>
-        </section>
-        <section>
-            <form id="searchForm">
-                <input type="text" id="keywordInput" placeholder="Enter a Keyword (optional)">
-            </form>
-        </section>
-        <section id="serviceSelect">
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="netflix">
-                Netflix
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="hulu">
-                Hulu
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="hbo">
-                Max
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="disney">
-                Disney+
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="prime.subscription">
-                Prime Video
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="apple">
-                Apple TV
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="platformBox" value="paramount">
-                Paramount Plus
-            </label>
-            
-            <label class="checkbox">
-                <input type="checkbox" value="peacock">
-                Peacock
-            </label>
-        </section>
-        <button id="startBtn">Search</button>
-        <!-- <div class="search-container">
-            <form id="searchForm">
-                <input type="text" id="movieTitleInput" placeholder="Enter a movie title" required>
-                <button type="submit">Search</button>
-            </form>
-        </div>-->
-        
-        <div id="results">
-        </div>
+        <main>
+            <div class="input-field col s12">
+                <select class="browser-default" id="genreSelect">
+                    <option>Select Genre (Required)</option>
+                    <option value="28">Action</option>
+                    <option value="12">Adventure</option>
+                    <option value="16">Animation</option>
+                    <option value="1">Biography</option>
+                    <option value="35">Comedy</option>
+                    <option value="80">Crime</option>
+                    <option value="99">Documentary</option>
+                    <option value="18">Drama</option>
+                    <option value="10751">Family</option>
+                    <option value="14">Fantasy</option>
+                    <option value="2">Film Noir</option>
+                    <option value="36">History</option>
+                    <option value="27">Horror</option>
+                    <option value="4">Musical</option>
+                    <option value="9648">Mystery</option>
+                    <option value="10749">Romance</option>
+                    <option value="878">Science Fiction</option>
+                    <option value="5">Sport</option>
+                    <option value="53">Thriller</option>
+                    <option value="10752">War</option>
+                    <option value="37">Western</option>
+                </select>
+            </div>
+            <section>
+                <form id="searchForm">
+                    <input type="text" id="keywordInput" placeholder="Enter a Keyword (optional)">
+                </form>
+            </section>
+            <section id="serviceSelect">
+                <p>Select up to 4 Streaming Services (Required).</p>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="netflix">
+                    <span>Netflix</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="hulu">
+                    <span>Hulu</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="hbo">
+                    <span>Max</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="disney">
+                    <span>Disney+</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="prime.subscription">
+                    <span>Prime Video</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="apple">
+                    <span>Apple TV</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="paramount">
+                    <span>Paramount Plus</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" class="platformBox" value="peacock">
+                    <span>Peacock</span>
+                </label>
+            </section>
+            <button id="startBtn">Search</button>
+            <div id="results">
+            </div>
+            <div id="modals">
+            </div>
+        </main>
     </div>
-    </main>
 </body>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/script.js"></script>
 </html>
