@@ -59,32 +59,29 @@ function fetchMovieResults() {
           
             `;
       // movieItem.onabort("click", function(event) {
-      //     event.preventDefault()
+      //     event.preventDefault(i)
 
       // })
       movieItem.addEventListener("click", function () {
         movieItem.innerHTML = `
-                <div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
+    <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
     <p class="image is-4by3">
-      <img src="${movieImg}" alt="">
+    <img src="${movieImg}" alt="">
     </p>
     <h1>${title} - ${releaseYear}</h1>
-  </div>
-  <button class="modal-close is-large" aria-label="close">Close</button>
-</div>
+    </div>
+   <button class="modal-close is-large" aria-label="close">Close</button>
+   </div>
                 `;
       });
-
-     
 
       // Append the movie item to the movie container
       resultsContainer.appendChild(movieItem);
     }
   });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal

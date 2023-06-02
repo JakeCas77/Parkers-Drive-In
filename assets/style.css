@@ -2,10 +2,23 @@
     margin: 0;
 }
 
+html {
+    background-color: #151515;
+}
+
+header {
+    text-align: center;
+  font-size: larger;
+  margin-trim: 20px; 
+
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #151515;
+    font-size: larger;
+    background-image: #151515;
     color: white;
+    text-align: center;
 }
 
 .navbar {
