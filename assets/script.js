@@ -43,6 +43,7 @@ function fetchMovieResults() {
       const overview = response.result[i].overview;
       const runtime = response.result[i].runtime; 
       const rating = response.result[i].imdbRating;
+      const YoutubeLink = response.result[i].youtubeTrailerVideoLink; 
       // Create a movie item element
       const movieItem = document.createElement("div");
       movieItem.classList.add("results-item");
@@ -61,6 +62,7 @@ function fetchMovieResults() {
           <p>${overview}</p>
           <p>Runtime Minutes: ${runtime}</p>
           <p>IMDb Rating Score: ${rating}</p>
+          <p>${YoutubeLink}</p>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
