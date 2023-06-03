@@ -41,6 +41,8 @@ function fetchMovieResults() {
       const releaseYear = response.result[i].year;
       const movieImg = response.result[i].backdropURLs.original;
       const overview = response.result[i].overview;
+      const runtime = response.result[i].runtime; 
+      const rating = response.result[i].imdbRating;
       // Create a movie item element
       const movieItem = document.createElement("div");
       movieItem.classList.add("results-item");
@@ -57,6 +59,8 @@ function fetchMovieResults() {
           <h4>${title}</h4>
           <p>${releaseYear}</p>
           <p>${overview}</p>
+          <p>Runtime Minutes: ${runtime}</p>
+          <p>IMDb Rating Score: ${rating}</p>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
