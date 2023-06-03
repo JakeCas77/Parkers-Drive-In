@@ -62,7 +62,7 @@ function fetchMovieResults() {
           <p>${overview}</p>
           <p>Runtime Minutes: ${runtime}</p>
           <p>IMDb Rating Score: ${rating}</p>
-          <p>${YoutubeLink}</p>
+          <a href="${YoutubeLink}">Watch the Trailer on Youtube!</a>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>

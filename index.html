@@ -12,11 +12,13 @@
     <title>Parker's Drive-In</title>
 </head>
 <header>
+    <!-- Title; Introductory -->
     <div class="logo">
         <h1>Drive In</h1>
     </div>
 </header>
 <body>
+    <!-- Scrollable drop down menu with genre's, value is coming from API  -->
     <div class="container">
         <main>
             <div class="input-field col s12">
@@ -46,6 +48,7 @@
                 </select>
             </div>
             <section>
+                <!-- Checkboxes for Streaming Services  -->
                 <form id="searchForm">
                     <input type="text" id="keywordInput" placeholder="Enter a Keyword (optional)">
                 </form>
@@ -85,9 +88,12 @@
                     <span>Peacock</span>
                 </label>
             </section>
+            <!-- Clickable; event coming from JS -->
             <button id="startBtn">Search</button>
+            <!-- Api fetchs results, ran in JS -->
             <div id="results">
             </div>
+            <!-- Modal created dynamically in JS, API provide content in modal -->
             <div id="modals">
             </div>
         </main>
