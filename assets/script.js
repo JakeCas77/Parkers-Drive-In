@@ -1,11 +1,9 @@
 const resultsContainer = document.getElementById("results");
 const modalsContainer = document.getElementById("modals");
-
 document.getElementById("startBtn").addEventListener("click", function (event) {
   fetchMovieResults();
   saveStremaingPlatform();
 });
-
 function saveStremaingPlatform() {
   var selectedStreaming = [];
   var checkedBoxes = $('input[type="checkbox"]:checked');
@@ -13,25 +11,19 @@ function saveStremaingPlatform() {
     var value = $(checkedBoxes[i]).val();
     selectedStreaming.push(value);
   }
-
   localStorage.setItem("platform", JSON.stringify(selectedStreaming));
 }
-
 function fetchMovieResults() {
   var selectedGenre = $("#genreSelect").val();
   var selectedStreaming = [];
   var keyword = $("#keywordInput").val();
-
   var checkedBoxes = $('input[type="checkbox"]:checked');
-
   for (var i = 0; i < checkedBoxes.length; i++) {
     var value = $(checkedBoxes[i]).val();
     selectedStreaming.push(value);
   }
-
   var streamingParam = selectedStreaming.join("%2C");
   var apiURL = `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&services=${streamingParam}&output_language=en&show_type=movie&genre=${selectedGenre}&show_original_language=en&keyword=${keyword}`;
-
   const settings = {
     async: true,
     crossDomain: true,
@@ -42,7 +34,6 @@ function fetchMovieResults() {
       "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
     },
   };
-
   $.ajax(settings).done(function (response) {
     console.log(response);
     for (let i = 0; i < 8; i++) {
@@ -50,11 +41,10 @@ function fetchMovieResults() {
       const releaseYear = response.result[i].year;
       const movieImg = response.result[i].backdropURLs.original;
       const overview = response.result[i].overview;
-
+      
       // Create a movie item element
       const movieItem = document.createElement("div");
       movieItem.classList.add("results-item");
-
       // Populate the movie item with data
       // <button class="button open-button">More Info</button>
       movieItem.innerHTML =
@@ -83,4 +73,6 @@ function fetchMovieResults() {
       $('.modal').modal();
     // });
   });
+
 }
+

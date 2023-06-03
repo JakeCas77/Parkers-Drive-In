@@ -3,20 +3,20 @@
 }
 
 html {
-    background-color: #151515;
+    background-color: #151515; 
+    background-image: url("./images/drivein.jpg");
+    background-size: 100%;
 }
 
 header {
-    text-align: center;
+  text-align: center;
   font-size: larger;
   margin-trim: 20px; 
-
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Headland One', serif;
     font-size: larger;
-    background-image: #151515;
     color: white;
     text-align: center;
 }
@@ -24,6 +24,7 @@ body {
 .logo {
     font-size: 30px;
     color: #4dbf00;
+    
 }
 
 .container{
