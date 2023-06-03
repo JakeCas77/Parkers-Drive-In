@@ -53,6 +53,7 @@ function fetchMovieResults() {
         `<img class="movieImgThumbNail" src="${movieImg}">
           <h3>${title} - ${releaseYear}</h3>
           <button data-target="modal${i}" class="btn modal-trigger">More Info</button>`;
+
       const modalItem = document.createElement("div");
       modalItem.innerHTML =
         `<div id="modal${i}" class="modal">
@@ -68,6 +69,7 @@ function fetchMovieResults() {
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>`;
+
       // Append the movie item to the movie container
       resultsContainer.appendChild(movieItem);
       modalsContainer.appendChild(modalItem);
@@ -76,4 +78,6 @@ function fetchMovieResults() {
       $('.modal').modal();
     // });
   });
+
 }
+
