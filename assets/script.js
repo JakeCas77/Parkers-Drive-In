@@ -50,13 +50,17 @@ function fetchMovieResults() {
       const releaseYear = response.result[i].year;
       const movieImg = response.result[i].backdropURLs.original;
       const overview = response.result[i].overview;
+      const poster = response.result[i].posterURLs.original;
+      const runtime = response.result[i].runtime; 
+      const rating = response.result[i].imdbRating;
+      const youtubeLink = response.result[i].youtubeTrailerVideoLink;
+      const youtubeId = response.result[i].youtubeTrailerVideoId;
 
       // Create a movie item element
       const movieItem = document.createElement("div");
       movieItem.classList.add("results-item");
 
       // Populate the movie item with data
-      // <button class="button open-button">More Info</button>
       movieItem.innerHTML =
         `<img class="movieImgThumbNail" src="${movieImg}">
           <h3>${title} - ${releaseYear}</h3>
@@ -67,8 +71,11 @@ function fetchMovieResults() {
         `<div id="modal${i}" class="modal">
         <div class="modal-content">
           <h4>${title}</h4>
-          <p>${releaseYear}</p>
+          <img class="poster" src="${poster}">
+          <p>${releaseYear} | Runtime: ${runtime} minutes | IMDb Score: ${rating}/100</p>
           <p>${overview}</p>
+          <a href="${youtubeLink}">Watch the Trailer on Youtube!</a>
+          <iframe width="480" height="270" src="https://www.youtube.com/embed/${youtubeId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -79,8 +86,6 @@ function fetchMovieResults() {
       resultsContainer.appendChild(movieItem);
       modalsContainer.appendChild(modalItem);
     }
-    // $(document).ready(function(){
       $('.modal').modal();
-    // });
   });
 }

@@ -8,22 +8,26 @@ html {
 
 header {
     text-align: center;
-  font-size: larger;
-  margin-trim: 20px; 
+    font-size: larger;
+    margin-trim: 20px; 
 
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: larger;
-    background-image: #151515;
+    background-color: #151515;
     color: white;
     text-align: center;
 }
 
+main {
+    background-color: rgba(0,0,0,.6);
+}
+
 .logo {
     font-size: 30px;
-    color: #4dbf00;
+    color: #26a69a;
 }
 
 .container{
@@ -48,8 +52,25 @@ img {
     max-width: 780px;
 }
 
+.poster {
+    max-height: 300px;
+    float: left;
+    margin-bottom: 25px;
+}
+
 .modal {
     color: black;
+}
+
+.modal-trigger {
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.modal-close {
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
 }
 
 .movieImgThumbNail {
