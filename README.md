@@ -22,14 +22,15 @@ THEN it closes out the modal and returns to the movie list.
 
 Improve the user experience by implementing parameters to pinpoint more accurate information regarding options for “Streaming Platforms”.
 As well as providing a user friendly Interface, that is simple, straight to the point, and ultimately provides great information regarding desired movies.
+Gives compelling information such as a Short Description, Title, Runtime, IMDb Ratings, year released, as well as a Image Poster of the movie and Youtube Link.  
 
 
 ## Images
 
 ![Alt text](assets/images/drivein.jpg)
-![Alt text](assets/images/2023-06-02.png)
+![Alt text](assets/images/2023-06-02%20(6).png)
 ![Alt text](assets/images/2023-06-02%20(3).png)
-![Alt text](assets/images/2023-06-02%20(4).png)
+![Alt text](assets/images/image%20(3).png)
 
 ## Wire-Frame
 

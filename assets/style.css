@@ -1,29 +1,33 @@
 * {
     margin: 0;
 }
-
+/* UI basic styling */
 html {
     background-color: #151515; 
     background-image: url("./images/drivein.jpg");
     background-size: 100%;
 }
-
+/* Centered the font for title */
 header {
   text-align: center;
   font-size: larger;
   margin-trim: 20px; 
 }
-
+/* assigned Google Font: Headland One */
 body {
     font-family: 'Headland One', serif;
     font-size: larger;
     color: white;
     text-align: center;
 }
+/* Makes background transparent */
+main {
+    background-color: rgba(0,0,0,.6);
+}
 
 .logo {
     font-size: 30px;
-    color: #4dbf00;
+    color: #26a69a
     
 }
 
