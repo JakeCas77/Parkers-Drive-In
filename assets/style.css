@@ -92,4 +92,8 @@ img {
     img {
         min-width: 120px;
     }
+
+    .modal-trigger {
+        margin-top: 20px;
+    }
 }
