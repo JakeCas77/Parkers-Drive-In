@@ -67,7 +67,6 @@ function fetchMovieResults() {
       const overview = response.result[i].overview;
       const runtime = response.result[i].runtime;
       const rating = response.result[i].imdbRating;
-      const youtubeLink = response.result[i].youtubeTrailerVideoLink;
       const youtubeId = response.result[i].youtubeTrailerVideoId;
 
       // Create a movie item element
@@ -88,8 +87,6 @@ function fetchMovieResults() {
           <img src="${poster}" class="poster">
           <p>${releaseYear} | Runtime: ${runtime} minutes | IMDb Score ${rating}/100</p>
           <p>${overview}</p>
-          <a href="${youtubeLink}">Watch the Trailer on Youtube!</a>
-          <br>
           <div class="youtube-player" data-id="${youtubeId}"></div>
         </div>
         <div class="modal-footer">
@@ -112,6 +109,8 @@ function loadYouTubePlayers() {
   youtubePlayers.forEach(function (playerElement) {
     const videoId = playerElement.getAttribute('data-id');
     const player = new YT.Player(playerElement, {
+      width: 480,
+      height: 270,
       videoId: videoId,
       events: {
         'onReady': onPlayerReady

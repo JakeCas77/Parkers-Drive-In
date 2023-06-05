@@ -62,6 +62,11 @@ img {
     color: black;
 }
 
+.modal-trigger {
+    margin-left: 20px;
+    margin-top: 36px;
+}
+
 .movieImgThumbNail {
     width: 15%;
     margin-right: 15px;
