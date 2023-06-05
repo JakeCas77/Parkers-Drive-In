@@ -52,9 +52,9 @@ Raheim Devins - https://github.com/RaheimDevins
 Jose Luna - https://github.com/JoseLuna2023
 Kalynn Powell - https://github.com/kmarie0420
 
-Framework CSS - https://bulma.io/documentation/overview/start/
+Framework CSS - https://materializecss.com/getting-started.html
 Movie of the Night API - https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/pricing
-OTT API - https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details 
+YouTube API - https://developers.google.com/youtube/iframe_api_reference
 
 Background Image - https://unsplash.com/ 
 Font - https://fonts.google.com/ 
