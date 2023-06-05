@@ -19,7 +19,6 @@ function getInfo() {
     }
   })
 
-
 }
 getInfo()
 function saveStremaingPlatform() {
@@ -59,16 +58,14 @@ function fetchMovieResults() {
   $.ajax(settings).done(function (response) {
     console.log(response);
     resultsContainer.innerHTML = ''
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 5; i++) {
       const title = response.result[i].title;
       const releaseYear = response.result[i].year;
       const movieImg = response.result[i].backdropURLs.original;
       const poster = response.result[i].posterURLs.original;
       const overview = response.result[i].overview;
-      const poster = response.result[i].posterURLs.original;
       const runtime = response.result[i].runtime; 
       const rating = response.result[i].imdbRating;
-      const youtubeLink = response.result[i].youtubeTrailerVideoLink;
       const youtubeId = response.result[i].youtubeTrailerVideoId;
 
       // Create a movie item element
@@ -79,7 +76,7 @@ function fetchMovieResults() {
       movieItem.innerHTML =
         `<img class="movieImgThumbNail" src="${movieImg}">
           <h3>${title} - ${releaseYear}</h3>
-          <button data-target="modal${i}" class="btn modal-trigger">More Info</button>`;
+          <button data-target="modal${i}" class="btn modal-trigger">More</button>`;
 
       const modalItem = document.createElement("div");
       modalItem.innerHTML =
@@ -89,8 +86,6 @@ function fetchMovieResults() {
           <img src="${poster}" class="poster">
           <p>${releaseYear} | Runtime: ${runtime} minutes | IMDb Score ${rating}/100</p>
           <p>${overview}</p>
-          <a href="${youtubeLink}">Watch the Trailer on Youtube!</a>
-          <br>
           <div class="youtube-player" data-id="${youtubeId}"></div>
         </div>
         <div class="modal-footer">
