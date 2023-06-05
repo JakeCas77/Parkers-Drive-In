@@ -23,7 +23,7 @@ body {
 }
 /* Makes background transparent */
 main {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.9);
 }
 
 .logo {
@@ -54,9 +54,8 @@ img {
 }
 
 .poster {
-    max-height: 300px;
+    max-height: 400px;
     float: left;
-    margin-bottom: 25px;
 }
 
 .modal {
