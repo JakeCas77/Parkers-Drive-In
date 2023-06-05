@@ -6,6 +6,22 @@ document.getElementById("startBtn").addEventListener("click", function (event) {
   saveStremaingPlatform();
 });
 
+//function for local storage
+var platformBox = $('.platformBox')
+function getInfo() {
+  var selectedStreaming = JSON.parse(localStorage.getItem('platform'))
+  platformBox.each(function () {
+    console.log(this.value)
+    for (var i = 0; i < selectedStreaming.length; i++) {
+      if (this.value == selectedStreaming[i]) {
+        this.checked = true
+      }
+    }
+  })
+
+
+}
+getInfo()
 function saveStremaingPlatform() {
   var selectedStreaming = [];
   var checkedBoxes = $('input[type="checkbox"]:checked');
@@ -42,6 +58,7 @@ function fetchMovieResults() {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
+    resultsContainer.innerHTML = ''
     for (let i = 0; i < 8; i++) {
       const title = response.result[i].title;
       const releaseYear = response.result[i].year;
