@@ -77,7 +77,7 @@ function fetchMovieResults() {
       movieItem.innerHTML =
         `<img class="movieImgThumbNail" src="${movieImg}">
           <h3>${title} - ${releaseYear}</h3>
-          <button data-target="modal${i}" class="btn modal-trigger">More Info</button>`;
+          <button data-target="modal${i}" class="btn modal-trigger">More</button>`;
 
       const modalItem = document.createElement("div");
       modalItem.innerHTML =
