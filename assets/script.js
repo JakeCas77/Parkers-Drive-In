@@ -59,7 +59,7 @@ function fetchMovieResults() {
   $.ajax(settings).done(function (response) {
     console.log(response);
     resultsContainer.innerHTML = ''
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 5; i++) {
       const title = response.result[i].title;
       const releaseYear = response.result[i].year;
       const movieImg = response.result[i].backdropURLs.original;
