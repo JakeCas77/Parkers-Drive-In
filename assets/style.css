@@ -71,3 +71,25 @@ img {
     width: 15%;
     margin-right: 15px;
 }
+
+/* Custom styles for mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .results-item
+    h3 {
+        font-size: medium;
+    }
+
+    .results-item
+    img {
+        min-width: 120px;
+    }
+}

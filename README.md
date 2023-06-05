@@ -31,6 +31,8 @@ Gives compelling information such as a Short Description, Title, Runtime, IMDb R
 ![Alt text](assets/images/2023-06-02%20(6).png)
 ![Alt text](assets/images/2023-06-02%20(3).png)
 ![Alt text](assets/images/image%20(3).png)
+![Alt text](assets/images/modal-img.PNG)
+![Alt text](assets/images/mobile-img.PNG)
 
 ## Wire-Frame
 
@@ -52,10 +54,9 @@ Raheim Devins - https://github.com/RaheimDevins
 Jose Luna - https://github.com/JoseLuna2023
 Kalynn Powell - https://github.com/kmarie0420
 
-Framework CSS - https://bulma.io/documentation/overview/start/
+CSS Framework - https://materializecss.com/
 Movie of the Night API - https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/pricing
-OTT API - https://rapidapi.com/gox-ai-gox-ai-default/api/ott-details 
-
+YouTube iframe API - https://developers.google.com/youtube/iframe_api_reference
 Background Image - https://unsplash.com/ 
 Font - https://fonts.google.com/ 
 
