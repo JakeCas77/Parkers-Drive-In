@@ -62,14 +62,8 @@ img {
 }
 
 .modal-trigger {
-    margin-top: 35px;
     margin-left: 20px;
-}
-
-.modal-close {
-    position: absolute; 
-    right: 0; 
-    bottom: 0;
+    margin-top: 36px;
 }
 
 .movieImgThumbNail {

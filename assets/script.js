@@ -108,6 +108,8 @@ function loadYouTubePlayers() {
   youtubePlayers.forEach(function (playerElement) {
     const videoId = playerElement.getAttribute('data-id');
     const player = new YT.Player(playerElement, {
+      width: 480,
+      height: 270,
       videoId: videoId,
       events: {
         'onReady': onPlayerReady
