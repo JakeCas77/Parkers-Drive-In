@@ -32,6 +32,7 @@ Gives compelling information such as a Short Description, Title, Runtime, IMDb R
 ![Alt text](assets/images/2023-06-02%20(3).png)
 ![Alt text](assets/images/image%20(3).png)
 ![Alt text](assets/images/modal-img.PNG)
+![Alt text](assets/images/mobile-img.PNG)
 
 ## Wire-Frame
 
