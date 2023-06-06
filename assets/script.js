@@ -11,7 +11,7 @@ var platformBox = $('.platformBox')
 function getInfo() {
   var selectedStreaming = JSON.parse(localStorage.getItem('platform'))
   platformBox.each(function () {
-    console.log(this.value)
+    // console.log(this.value)
     for (var i = 0; i < selectedStreaming.length; i++) {
       if (this.value == selectedStreaming[i]) {
         this.checked = true
@@ -57,7 +57,7 @@ function fetchMovieResults() {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    // console.log(response);
     resultsContainer.innerHTML = ''
     for (let i = 0; i < 5; i++) {
       const title = response.result[i].title;
