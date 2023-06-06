@@ -64,7 +64,7 @@ function fetchMovieResults() {
       const movieImg = response.result[i].backdropURLs.original;
       const poster = response.result[i].posterURLs.original;
       const overview = response.result[i].overview;
-      const runtime = response.result[i].runtime; 
+      const runtime = response.result[i].runtime;
       const rating = response.result[i].imdbRating;
       const youtubeId = response.result[i].youtubeTrailerVideoId;
 
