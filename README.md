@@ -55,8 +55,9 @@ Jose Luna - https://github.com/JoseLuna2023
 Kalynn Powell - https://github.com/kmarie0420
 
 CSS Framework - https://materializecss.com/
-Movie of the Night API - https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/pricing
+Movie of the Night API - https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
 YouTube iframe API - https://developers.google.com/youtube/iframe_api_reference
+
 Background Image - https://unsplash.com/ 
 Font - https://fonts.google.com/ 
 

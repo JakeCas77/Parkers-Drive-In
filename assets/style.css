@@ -27,8 +27,7 @@ main {
 
 .logo {
     font-size: 30px;
-    color: #26a69a
-    
+    color: #26a69a;
 }
 
 .container{
@@ -83,12 +82,12 @@ img {
         width: auto;
     }
 
-    .results-item
+    .results-item 
     h3 {
         font-size: medium;
     }
 
-    .results-item
+    .results-item 
     img {
         min-width: 120px;
     }
